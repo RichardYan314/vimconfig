@@ -31,13 +31,28 @@ git clone 项目至 Vim 主配置文件夹，
 Vim 中文帮助下载自　https://sourceforge.net/projects/vimcdoc/files/
 放置于 /doc/ 目录下。
 
-以下为中文帮助安装方法之参考，本项目中已安装.
+以下为中文帮助安装方法之参考，本项目中已安装：
+
 ---
 在Vim中输入命令:help，即可进入帮助页面，默认是英文帮助，如果你喜欢看中文，可以通过以下方式安装中文帮助内容：
 1. 下载中文帮助的文件压缩包
 2. 解压，把doc目录下的文件复制到~/.vim/doc下
 3. 确认在.vimrc中设置了set helplang=cn
 4. 输入命令:help即可进入中文帮助
+
+#### pathogen插件管理
+pathogen在.vim目录下建立bundle文件，所有的插件都会在该目录下管理。
+当Vim启动时，会自动执行runtimepath(rtp)列表中所包含文件夹下的vim脚本，pathogen会在启动时把./vim/bundle下的文件夹中的插件按照一定顺序递归加载到rtp中，这样Vim启动时，通过pathogen管理的插件就生效了。
+
+有了pathogen之后，一般.vim文件夹下只有三个文件夹：autoload、bundle和doc，其他插件将被安装在bundle文件夹下。
+
+以下为 pathogen 插件安装方法之参考，本项目中已安装：
+
+---
+1. 在.vim文件夹下建立autoload和bundle目录
+2. 从下载地址获取pathogen.vim文件，将其复制到autoload目录下
+3. 在.vimrc文件中增加如下代码：
+    call pathogen#infect()
 
 ## 其他
 

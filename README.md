@@ -57,6 +57,43 @@ pathogen在.vim目录下建立bundle文件，所有的插件都会在该目录�
 3. 在.vimrc文件中增加如下代码：
     call pathogen#infect()
 
+#### NERDTree
+NERDTree 下载自 https://github.com/scrooloose/nerdtree
+放置于 /bundle/nerdtree/ 目录下
+
+NERDTree是Vim最常用的插件之一，可以在Vim运行时显示目录和文件结构，
+类似TextMate左侧的文件浏览器，但操作起来更为方便，
+你可以在手不离开键盘的情况下快速浏览文件，并在文件和文件夹之间进行切换。
+
+以下为 pathogen 插件安装方法之参考，本项目中已安装：
+
+---
+1. 进入.vim/bundle目录
+2. 执行git clone git://github.com/scrooloose/nerdtree.git
+3. 下载完成后，在bundle下会多出一个nerdtree的文件夹，所有相关插件都在该文件夹下
+4. 在Vim中运行:Helptags来生成NERDTree的在线帮助tags
+
+---
+##### 使用说明
+打开Vim，输入:NERDTree，即可呼出执行Vim命令的当前目录的文件目录。为了方便使用，我在.vimrc中定义了快捷键，可以用Ctrl+t打开NERDTree，你可以定义自己习惯的快捷键。
+
+NERDTree提供了丰富的键盘操作方式来浏览和打开文件，我简单介绍一些常用的快捷键：
+
+和编辑文件一样，通过h j k l移动光标定位
+o 打开关闭文件或者目录，如果是文件的话，光标出现在打开的文件中
+go 效果同上，不过光标保持在文件目录里，类似预览文件内容的功能
+i和s可以水平分割或纵向分割窗口打开文件，前面加g类似go的功能
+t 在标签页中打开
+T 在后台标签页中打开
+p 到上层目录
+P 到根目录
+K 到同目录第一个节点
+J 到同目录最后一个节点
+m 显示文件系统菜单（添加、删除、移动操作）
+? 帮助
+q 关闭
+想了解更多操作方式，可以通过? 查看详细的帮助信息。
+
 ## 其他
 
 欢迎各位提供关于插件和配置的建议。

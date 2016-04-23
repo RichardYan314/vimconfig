@@ -22,6 +22,9 @@ git clone 项目至 Vim 主配置文件夹，
 具体位置请使用 vim --version，
 或于 vim 环境下执行 :version 查看。
 
+随后，于家目录下建立链接文件指向项目内 .vimrc 配置文件：
+    ln $本项目目录/.vimrc ~/vimrc
+
 ### 包含插件
 
 ## 其他

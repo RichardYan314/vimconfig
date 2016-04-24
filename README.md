@@ -144,6 +144,36 @@ as follows:
 3. ctrl+s/v 可以水平或垂直分割窗口打开文件
 4. ctrl+c 退出该模式
 
+### Powerline
+Powerline 下载自 https://github.com/Lokaltog/vim-powerline
+放置于 /bundle/powerline 目录下。
+
+Powerline是Vim的一个非常漂亮的状态栏插件，
+安装了Powerline之后，Vim底部将会出现一个增强型状态栏，
+当Vim处于NORMAL、INSERT、BLOCK等状态时，状态栏会呈现不同的颜色，
+同时状态栏还会显示当前编辑文件的格式（uft-8等）、文件类型（java、xml等）和光标位置等，喜欢的就装。
+
+以下为 Command-T 安装方法之参考，本项目中已安装：
+
+---
+1. cd ~/.vim
+2. git submodule add https://github.com/Lokaltog/vim-powerline
+3. git submodule init
+4. 在.vimrc中设置状态栏主题
+
+ "powerline{
+ set guifont=PowerlineSymbols\ for\ Powerline
+ set nocompatible
+ set t_Co=256
+ let g:Powerline_symbols = 'fancy'
+ "}
+
+安装之后，再次打开Vim，你就会发现底部已经多了一个彩色的状态栏了。
+
+## References
+* 谁说Vim不是IDE？（二） http://www.cnblogs.com/chijianqiang/archive/2012/10/31/vim-2.html
+* 谁说Vim不是IDE？（三） http://www.cnblogs.com/chijianqiang/archive/2012/11/06/vim-3.html
+
 ## 其他
 
 欢迎各位提供关于插件和配置的建议。

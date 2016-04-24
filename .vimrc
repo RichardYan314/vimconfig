@@ -17,7 +17,7 @@ set fileencodings=uft-8,gbk "使用utf-8或gbk打开文件
 set hls                     "检索时高亮显示匹配项
 set helplang=cn             "帮助系统设置为中文
 set foldmethod=syntax       "代码折叠
-set guifont=14
+set guifont=Monospace\ 16
 "}}
 
 "conf for tabs, 为标签页进行的配置，通过ctrl h/l切换标签等
@@ -30,7 +30,7 @@ nnoremap <leader>t : tabe<CR>
 
 "状态栏的配置 
 "powerline{
-set guifont=PowerlineSymbols\ for\ Powerline
+set guifont+=PowerlineSymbols\ for\ Powerline
 set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'

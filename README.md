@@ -94,6 +94,56 @@ m 显示文件系统菜单（添加、删除、移动操作）
 q 关闭
 想了解更多操作方式，可以通过? 查看详细的帮助信息。
 
+### Command-T
+Command-T 下载自 https://wincent.com/products/command-t
+放置于 /bundle/command-t 目录下。
+
+Command-T是一个基于Ruby和C扩展实现的快速文件浏览的插件，
+类似TextMate的Go to File（Command+T呼出）功能，
+或Eclipse的Open Resource（Command+Shift+r）功能，
+可以通过模糊匹配快速定位并打开文件。
+
+以下为 Command-T 安装方法之参考，本项目中已安装：
+
+---
+On Linux and similar platforms, the linked version of Ruby will depend on
+your distribution. You can usually find this out by examining the
+compilation and linking flags displayed by the |:version| command in Vim, and
+by looking at the output of:
+
+  :ruby puts "#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}"
+
+Some Linux distributions package Ruby development tools separately from Ruby
+itself; if you're using such a system you may need to install the "ruby-dev",
+"ruby-devel" or similar package using your system's package manager in order
+to build Command-T.
+
+If you manage your entire `~/.vim` folder using Git then you can add the
+Command-T repository as a submodule:
+
+  cd ~/.vim
+  git submodule add https://github.com/wincent/command-t.git bundle/command-t
+  git submodule init
+
+Or if you just wish to do a simple clone instead of using submodules:
+
+  cd ~/.vim
+  git clone https://github.com/wincent/command-t.git bundle/command-t
+
+
+Wherever the Command-T files were installed, you can build the extension by
+changing to the `ruby/command-t` subdirectory and running a couple of commands
+as follows:
+
+  cd ~/.vim/bundle/command-t/ruby/command-t
+  ruby extconf.rb
+  make
+
+1. ctrl+j/k 上下选择文件，选中后回车打开文件
+2. ctrl+t 以tab方式打开文件
+3. ctrl+s/v 可以水平或垂直分割窗口打开文件
+4. ctrl+c 退出该模式
+
 ## 其他
 
 欢迎各位提供关于插件和配置的建议。

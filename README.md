@@ -13,9 +13,10 @@
 
 ### 获取代码
 
-* git项目主页：
+* git项目主页：https://github.com/RichardYan314/vimconfig.git
 
-git clone 项目至 Vim 主配置文件夹，
+clone 项目至 Vim 主配置文件夹:
+    git clone --recursive https://github.com/RichardYan314/vimconfig.git <path>
 根据个体差异，
 该文件夹位置可能有所不同，
 一般来说位于 $HOME/.vim下。
